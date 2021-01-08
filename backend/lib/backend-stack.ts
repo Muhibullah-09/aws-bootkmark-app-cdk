@@ -95,7 +95,7 @@ export class BackendStack extends cdk.Stack {
 
     // housekeeping for uploading the data in bucket 
     new s3deploy.BucketDeployment(this, "DeploybookmarkApp", {
-      sources: [s3deploy.Source.asset("../frontend/public")],
+      sources: [s3deploy.Source.asset("../bookmark-frontend/public")],
       destinationBucket: bookmarkBucket,
       distribution,
       distributionPaths: ["/*"],
